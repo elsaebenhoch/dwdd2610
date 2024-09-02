@@ -1,0 +1,11 @@
+header, nav, main, footer {
+    max-width: 60rem;
+    margin: auto;
+}
+
+section {
+    div {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+

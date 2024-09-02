@@ -1,0 +1,38 @@
+header {
+    padding: 2rem $gutter;
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+section {
+    div {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+nav {
+    ul {
+        list-style-type: none;
+        padding: 0rem;
+        margin: 0;
+        display: flex;
+        flex: 1;
+        li {flex: 1;}
+    }
+    li.active {
+        background-color: $orangeColor;
+        border-radius: 10px;
+    }
+    a {
+        display: block;
+        padding: 0.75 rem;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        &:hover {color: $secondaryColor;}
+    }
+}
+
+
+

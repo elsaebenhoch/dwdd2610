@@ -1,0 +1,114 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+}
+
+#headerWrapper {
+    background-color: $primaryColor;
+    color: $fontColor;
+}
+
+header {
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem $gutter;
+    gap: 8px;
+    h1 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: $boldWeight;
+        color: $fontColor;
+    }
+    a {
+        color: $fontColor;
+        margin-left: auto;
+    }
+}
+
+#navWrapper {
+    background-color: $fontColor;
+    padding: .5rem;
+}
+
+nav {
+    ul {
+        padding: 0rem;
+        margin: 0 $gutter;
+    }
+    ul li {
+        list-style-type: none;
+    }
+    ul li a {
+        text-decoration: none;
+        display: block;
+        padding: .8rem $gutter;
+        color: white;
+        text-align: center;
+        &:hover {color: $secondaryColor;}
+    }
+    ul li.active a {
+        border-radius: 10px;
+        background-color: $orangeColor;
+    }
+}
+
+main {
+    h1{color: $primaryColor; margin-left: 1rem;}
+}
+
+section {
+    display: flex;
+    justify-content: center;
+
+    div {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 100%;
+    }
+
+    figure {
+        width: 80%;
+        height: auto;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+figcaption {
+    text-align: center;
+    color: white;
+    background-color: $orangeColor;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+#footerWrapper {
+    background-color: $primaryColor;
+    footer {
+        padding: .25rem;
+        color: white;
+        text-align: center;
+        font-weight: $lightWeight;
+    }
+}

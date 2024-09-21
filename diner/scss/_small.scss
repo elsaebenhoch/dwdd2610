@@ -1,0 +1,152 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $defaultFont;
+}
+
+#headerWrapper {
+    background-color: $whiteColor;
+    color: black;
+}
+
+#headerWrapper header {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    padding-left: 1rem;
+}
+
+#headerWrapper header img {
+    display: block;
+    width: 20px;
+    height: auto;
+}
+
+nav {
+    background-color: $secondaryColor;
+    margin: 0;
+}
+
+#myButton::before {
+    content: "\2630";
+}
+
+#myButton {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    font-weight: $lightWeight;
+    cursor: pointer;
+}
+
+ul.menuLinks {
+    list-style-type: none;
+    margin: 8;
+    padding: 0;
+    display: none;
+    li a {
+        color: white;
+        display: block;
+        padding: .75rem $gutter;
+        text-decoration: none;
+    }
+    li.active a {
+        background-color: rgba(255,255,255,0.2);
+    }
+}
+
+ul.open.menuLinks {
+    display: block;
+}
+
+#myButton.open::before {
+    content: "x";
+}
+
+main h2 {
+    padding: 0 $gutter;
+}
+
+div.allCards {
+    padding: 0 $gutter;
+    section {
+        border: 1px solid $thirdColor;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 1rem 0;
+        h2, p, img {
+            margin: 0;
+            padding: 1rem $gutter;
+        }
+        h2 {
+            background-color: $primaryColor;
+            font-size: 1.5rem;
+            text-align: center;
+            color: white;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            padding: 0;
+        }
+        a {
+            display: block;
+            background-color: $secondaryColor;
+            padding: .75rem;
+            text-align: center;
+            margin: 0 3rem 1rem 3rem;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+#footerWrapper {
+    background-color: $whiteColor;
+}
+
+footer {
+    padding: 0.5rem $gutter;
+    background-color: $whiteColor;
+    section.contact {
+        p{margin: .5rem; a{color: black;}}
+        ion-icon{color: $primaryColor; padding-right: 5px;}
+    }
+    section.social {
+        display: flex;
+        justify-content: center;
+        a {
+            display: block;
+            border: solid 1px $thirdColor;
+            margin: .5rem;
+            padding: .5rem;
+            color: $primaryColor;
+            &:hover {
+                background-color: rgba(137,29,26,0.3);
+            }
+        }
+    }
+    p.legal {
+        margin: 0;
+        font-weight: $lightWeight;
+        text-align: center;
+    }
+}

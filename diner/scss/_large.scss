@@ -1,0 +1,48 @@
+header, nav, main, footer {
+    margin: 0 auto;
+    max-width: 60rem;
+}
+
+#headerWrapper header img {
+    display: block;
+    width: 40px;
+    height: auto;
+}
+
+#headerWrapper {
+    padding: .2rem;
+}
+
+#navWrapper {
+    background-color: $secondaryColor;
+    padding: .002rem;
+}
+
+div.allCards {
+    section {
+        flex-basis: calc(33.333% - (($gutter*2)/3));
+    }
+}
+
+#myButton {
+    display: none;
+}
+
+ul.menuLinks li a {
+    padding: .4rem 1rem;
+}
+
+ul.menuLinks, ul.menuLinks.open {
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul.menuLinks a:hover {
+    background-color: $thirdColor;
+}
+
+footer div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}

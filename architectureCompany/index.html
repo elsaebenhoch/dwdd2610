@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <title>Modern Architecture</title>
+</head>
+<body>
+    <div id="headerWrapper">
+        <header>
+            <picture>
+                <source media="(max-width: 700px)" srcset="images/logoBig.png">
+                <source media="(max-width: 1100px)" srcset="images/logoBig.png">
+                <img src="images/logoBig.png" alt="logo">
+            </picture>
+            <h1>Modern Architecture</h1>
+        </header>
+    </div>
+    <div id="navWrapper">
+        <nav>
+            <ul>
+                <li class="active"><a href="#">Learn</a></li>
+                <li><a href="#">Practice</a></li>
+                <li><a href="#">Implement</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <picture class="hero">
+            <source media="(max-width: 700px)" srcset="images/ADS.webp">
+            <source media="(max-width: 1100px)" srcset="images/ADM.webp">
+            <img src="images/architecture2.webp" alt="architecture">
+        </picture>
+
+        <h1>My Video with Captions</h1>
+
+        <video controls>
+            <source src="media/movie_hb.mp4" type="video/mp4" />
+            <source src="media/movie_hb.webm" type="video/webm" />
+            <track
+              label="English"
+              kind="subtitles"
+              srclang="en"
+              src="media/caption_en.vtt"
+              default />
+            <track
+              label="Español"
+              kind="subtitles"
+              srclang="es"
+              src="media/captions_esp.vtt" />
+          </video>
+          <div id="detailsWrapper">
+          <details>
+            <summary>Video Transcript</summary>
+            <p>If you’re looking for some nearby hikes to do, there’s a couple I can see just from my window at home.</p>
+            <p>We’re looking at the Uinta-Wasatch-Cache National Forest, and the first hike is The “G” Hike. This trail is just under 2 miles and is a moderate hike. You’ll gain a lot of elevation in the beginner, but as the hike goes on, the incline gets a little more gradual. At the end of the trail, you’ll be right at the G, and you can climb up to the top of it if you want. This trail is very exposed, so you’ll want to do it early in the morning or later in the day. This hike is beautiful to do at sunset since you’ll be looking west, and overlooking the mountains and Utah lake.</p>
+            <p>Another hike you can do here is Mount Timpanogos, which is a bit more strenuous. This trail is just over 14 miles long, and along the way, you gain 4 and half thousand feet in elevation gain. But, while hiking, you’ll come across beautiful wildflowers, and some wildlife too, like mountain goats, if you’re lucky. Although it’s a hard hike, getting to the top is very rewarding because you’ll get views of Utah Lake, Provo Canyon, and Emerald Lake. This hike is a full-day trip, but some people will camp in the mountains to break it into a multi-day hike.</p> 
+          </details>
+        </div>
+    </main>
+    
+
+    <div id="footerWrapper">
+        <footer>
+            <p>&copy; 2024 &bull; Elsa Ebenhoch</p>
+        </footer>
+    </div>
+</body>
+</html>

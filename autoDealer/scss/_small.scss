@@ -1,0 +1,217 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $defaultFont;
+}
+
+#theButton::before {
+    content:"\2630"
+}
+
+#headerWrapper {
+    width: 100%;
+    background-color: $thirdColor;
+    padding: 10px;
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    picture {
+        display: block;
+    }
+    header a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: $primaryColor;
+        font-weight: $boldWeight;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+#headerWrapper header img {
+    display: block;
+    width: 60px;
+    height: auto;
+}
+
+#theButton {
+    border: none;
+    background: none;
+    font-size: 2rem;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+#theNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li a {
+        color: $primaryColor;
+        display: block;
+        padding: .75rem $gutter;
+        text-decoration: none;
+        border-bottom: 1px solid $primaryColor;
+    }
+    li.active a {
+        color: $secondaryColor;
+    }
+}
+
+#theButton.open::before {
+    content: "\2715";
+}
+
+#theNav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+    ul {
+        overflow: hidden;
+    }
+}
+
+#theNav.open {
+    grid-template-rows: 1fr;
+}
+
+.parentHero {
+    position: relative;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    p {
+        position: absolute;
+        margin: 0;
+        background: linear-gradient(70deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,0) 100%);
+        width: 100%;
+        padding: 1rem;
+        top: calc(50% - 35px);
+        color: $primaryColor;
+        font-size: 2rem;
+        font-weight: $boldWeight;
+        text-align: center;
+    }
+}
+
+h1, p {
+    padding-left: $gutter;
+    padding-right: $gutter;
+}
+
+div.allCards {
+    padding: 0 $gutter;
+    section {
+        border: 1px solid $thirdColor;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 1rem 0;
+        h2, p, img {
+            margin: 0;
+            padding: 1rem $gutter;
+        }
+        h2 {
+            text-align: center;
+            font-weight: $normalWeight;
+            font-size: 1.3rem;
+        }
+        img {
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            width: 100px;
+            height: auto;
+        }
+        a {
+            display: block;
+            background-color: $secondaryColor;
+            padding: .75rem;
+            text-align: center;
+            margin: 0 3rem 1rem 3rem;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-size: .8rem;
+        }
+        &.anim1:hover img {animation: myBounce 1s 1;}
+        &.anim2:hover img {animation: mySpin 1s 1;}
+        &.anim3:hover img {animation: myPulse 1s 1;}
+        &.anim4:hover img {animation: myWobble 1s 1;}
+
+        @keyframes myBounce {
+            0% {bottom:0px; animation-timing-function:ease-out;}
+            25% {bottom:15px; animation-timing-function:ease-in;}
+            50% {bottom:0px; animation-timing-function:ease-out;}
+            75% {bottom:7px; animation-timing-function:ease-in;}
+            100% {bottom:0px; animation-timing-function:ease-out;}
+        }
+
+        @keyframes mySpin {
+            from {transform: rotate(0deg);}
+            to {transform: rotate(360deg);}
+        }
+
+        @keyframes myPulse {
+            0% {transform: scale(1.0);}
+            25% {transform: scale(1.5);}
+            50% {transform: scale(0.75);}
+            75% {transform: scale(1.25);}
+            100% {transform: scale(1.0);}
+        }
+
+        @keyframes myWobble{
+            0% { transform: translateX(0%); } 
+            15% { transform: translateX(-25%) rotate(-5deg); } 
+            30% { transform: translateX(20%) rotate(3deg); } 
+            45% { transform: translateX(-15%) rotate(-3deg); } 
+            60% { transform: translateX(10%) rotate(2deg); }
+            75% { transform: translateX(-5%) rotate(-1deg); }
+            100% { transform: translateX(0%); } 
+         } 
+    }
+}
+
+#reviews {
+    margin-bottom: 1rem;
+    background-color: $thirdColor;
+    padding: $gutter;
+    h3 {
+        text-align: center;
+        font-weight: $normalWeight;
+        font-size: 1.5rem;
+    }
+}
+
+
+
+#footerWrapper {
+    background-color: $primaryColor;
+    color: white;
+    font-weight: $lightWeight;
+    text-align: center;
+    padding: .2rem;
+}
+

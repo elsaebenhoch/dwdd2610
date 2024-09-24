@@ -1,0 +1,15 @@
+header, nav, main, footer {
+    margin: 0 auto;
+    max-width: 60rem;
+}
+
+#headerWrapper header img {
+    width: 100px;
+    padding: .5rem;
+}
+
+div.allCards {
+    section {
+        flex-basis: calc(25% - (($gutter*4)/4));
+    }
+}

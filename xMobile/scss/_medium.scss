@@ -1,0 +1,42 @@
+#headerWrapper header img {
+    width: 130px;
+    padding-top: .5rem;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 50px auto auto;
+    align-items: center;
+    padding: 0 $gutter;
+}
+
+#primaryNav button {
+    display: none;
+}
+
+#primaryNav {
+    grid-column: 3;
+    justify-self: end;
+}
+
+#primaryNav ul, #primaryNav ul.open {
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+    position: static;
+    border: none;
+    box-shadow: none;
+    li a {
+        padding: .4rem 1rem;
+    }
+    a:hover {
+        text-decoration: underline 4px $secondaryColor;
+    }
+}
+
+// create the for loop
+@for $i from 1 through 12 {
+    $width: calc($i /12) *100%;
+    .medium-#{$i} {flex-basis: $width;}
+}
+

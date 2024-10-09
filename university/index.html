@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
+    <title>Utah University</title>
+</head>
+<body>
+    <div id="headerWrapper">
+        <header id="top">
+            <picture>
+                <source media="(max-width: 700px)" srcset="images/logoBig.png">
+                <source media="(max-width: 1100px)" srcset="images/logoBig.png">
+                <img src="images/logoBig.png" alt="logo">
+            </picture>
+            <h1>Utah University</h1>
+            <a href="#navLinks">&#9776;</a>
+        </header>
+    </div>
+
+    <div id="navWrapper">
+        <nav id="navLinks">
+            <a href="#top">&#10005;</a>
+            <ul>
+                <li><a href="#">Students</a></li>
+                <li class="active"><a href="#">Apply</a></li>
+                <li><a href="#">Academics</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Tuition</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="mainWrapper">
+        <main>
+            <h2>Apply</h2>
+
+            <form method="get" action="thanks.html" class="apply" autocomplete="on">
+                <h3>Personal Information</h3>
+                <label>First Name: <input type="text" name="fname" autocomplete="given-name" required title="First Name Here"></label>
+                <label>Last Name: <input type="text" name="lname" autocomplete="family-name" required title="Last Name Here"></label>
+                <label>Email: <input type="email" name="email" autocomplete="email" required title="Your Email"></label>
+                <label>Phone Number: <input type="tel" name="phone" autocomplete="tel" required title="Your Phone Number"></label>
+                <label>Address: <input type="text" name="address" autocomplete="street-address" title="Your Address"></label>
+                <label>City: <input type="text" name="city" autocomplete="address-level2" title="Your City"></label>
+                <label>State: <input type="text" name="state" autocomplete="address-level1" title="Your State"></label>
+                <label>Zip Code: <input type="text" name="phone" autocomplete="postal-code" title="Your Zip Code"></label>
+
+                <h3>Communication Preferences</h3>
+                <label>
+                    <select name="condition">
+                        <option value="No Selection Made">Please Select</option>
+                        <option value="text">Text Messages</option>
+                        <option value="email">Email</option>
+                        <option value="mail">Mail</option>
+                    </select>
+                </label>
+
+                <h3>Previous Education</h3>
+                <p>School Type</p>
+                <label><input type="radio" name="school" value="public"> Public School</label>
+                <label><input type="radio" name="school" value="private"> Private School</label>
+                <label><input type="radio" name="school" value="charter"> Charter School</label>
+
+                <p>High School Graduation Date</p>
+                <label><input type="date" name="graduation"></label>
+
+                <h3>Completed Education</h3>
+                <label><input type="checkbox" name="Diploma"> High School Diploma</label>
+                <label><input type="checkbox" name="GED"> GED</label>
+                <label><input type="checkbox" name="Associate's"> Associate's Degree</label>
+
+                <h3>Create an Account</h3>
+                <label>Username (6 or more letters)<input type="text" required minlength="6" title="Please enter a username"></label>
+                <label> Password (at least 6 characters)<input type="password" name="password" required pattern="[A-Za-z0-9]{6,12}" title="Password needs to be at least 8 characters long"></label>
+                
+
+                <input type="submit" value="Apply">
+            </form>
+        </main>
+    </div>
+
+    <div id="footerWrapper">
+        <footer>
+            <p>&copy; 2024 &bull; Elsa Ebenhoch</p>
+        </footer>
+    </div>
+</body>
+</html>

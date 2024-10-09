@@ -1,0 +1,142 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $defaultFont;
+    min-width: 320px;
+    display: grid;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 80px 1fr 44px;
+    column-gap: $gutter;
+    align-items: center;
+    padding: .5rem $gutter;
+    picture {
+        max-width: 100%;
+    }
+    img {
+        max-width: 80px;
+        height: auto;
+    }
+    h1 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+div#navWrapper {
+    grid-row-start: 4;
+}
+
+#top a, #navLinks > a {
+    display: block;
+    text-align: right;
+    font-size: 1.6rem;
+    height: 44px;
+    text-decoration: none;
+    color: #333;
+}
+
+#top a {
+    font-size: 2rem;
+}
+
+#navLinks > a {
+    padding: 32px 20px 0 0;
+}
+
+nav {
+    height: 100vh;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li a {
+        display: block;
+        color: $primaryColor;
+        padding: .9rem 2vw;
+        text-decoration: none;
+        text-align: right;
+        border-bottom: 1px solid $secondaryColor;
+    }
+    li.active a {
+        color: $secondaryColor;
+    }
+}
+
+main h2 {
+    margin: 1rem;
+}
+
+form.apply {
+    margin: 1rem $gutter;
+    label {
+        display: block;
+        font-size: .8rem;
+        padding-top: .2rem;
+    }
+    h3 {
+        font-size: .9rem;
+        color: $secondaryColor;
+        margin: 1.5rem 0 .2rem 0;
+        border-bottom: 1px solid $primaryColor;
+    }
+    p {
+        font-size: .9rem;
+        margin-bottom: 0.2rem;
+    }
+    input[type=text],
+    input[type=tel],
+    input[type=number],
+    input[type=email],
+    input[type=password],
+    input[type=date],
+    select {
+        display: block;
+        border: 1px solid $secondaryColor;
+        border-radius: 0 10px 10px 0;
+        border-left-width: 5px;
+        font-size: 1rem;
+        width: 250px;
+        padding: .2rem $gutter;
+        }
+    input[type=submit] {
+        border: none;
+        background-color: $secondaryColor;
+        color: $thirdColor;
+        border-radius: 10px;
+        padding: .75rem 1.5rem;
+        margin: 2rem 0;
+        font-size: 1.2rem;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+    input:required {
+        border-left-width: 5px;
+        border-left-color: $thirdColor;
+    }
+}
+
+#footerWrapper {
+    text-align: center;
+    font-weight: $lightWeight;
+    background-color: $thirdColor;
+    padding: .5rem;
+}
+

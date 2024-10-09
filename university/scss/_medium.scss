@@ -1,0 +1,44 @@
+body {
+    display: block;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 100px 1fr 44px;
+    column-gap: $gutter;
+    align-items: center;
+    padding: .5rem $gutter;
+    picture {
+        max-width: 100%;
+    }
+    img {
+        max-width: 100px;
+        height: auto;
+    }
+    h1 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+#top a, #navLinks > a {
+    display: none;
+}
+
+nav {
+    display: flex;
+    height: auto;
+    border-bottom: 2px solid $secondaryColor;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    li a {
+        border: none;
+    }
+    li a:hover {
+        background-color: $whiteColor;
+    }
+}

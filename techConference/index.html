@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
+    <title>WebDev Conference</title>
+</head>
+<body>
+    <div id="headerWrapper">
+        <header>
+            <picture>
+                <source media="(max-width: 700px)" srcset="images/logoBig.png">
+                <source media="(max-width: 1100px)" srcset="images/logoBig.png">
+                <img src="images/logoBig.png" alt="logo">
+            </picture>
+            <h1>WebDev Conference</h1>
+            <div id="hamburgerBtn">
+                <span class="top"></span>
+                <span class="bottom"></span>
+            </div>
+        </header>
+    </div>
+
+    <div id="navWrapper">
+        <nav>
+            <ul id="primaryNav">
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">Workshops</a></li>
+                <li class="active"><a href="#">Speakers</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Tickets</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="mainWrapper">
+        <main>
+            <div class="hero">
+                <video autoplay muted playinline loop width="800" height="300">
+                    <source src="/media/hero-video-hb.webm" type="video/webm" />
+                  
+                    <source src="/media/hero-video-hb.mp4" type="video/mp4" />
+                  </video>
+                  <div>
+                    <h3>New York City Conference</h3>
+                    <p>February 15th, 2025</p>
+                  </div>
+            </div>
+
+            <h1>Speaker Lineup</h1>
+            <p>Leading industry experts will share insights on the latest trends, tools, and technologies shaping the future of web design and development. Our speakers include front-end innovators, back-end engineers, UX/UI designers, and performance optimization specialists, each with years of experience working on cutting-edge projects. Expect engaging talks, hands-on workshops, and panel discussions covering topics like responsive design, modern frameworks, accessibility, security, and more.</p>
+
+            <div id="cards">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="images/person1.webp" alt="Marie Green" width="600" height="400">
+                      </div>
+                      <div class="flip-card-back">
+                        <h2>Marie Green</h2>
+                        <h4>Front-End Development</h4>
+                        <p>Marie is a front-end developer with a passion for crafting seamless user experiences. With over a decade of experience working with leading tech companies, she has become an expert in responsive design, CSS architectures, and modern JavaScript frameworks. At the conference, Marie will dive deep into the future of CSS, sharing techniques for building scalable, maintainable front-end systems that enhance performance and user engagement.</p>
+                        <a href="a">READ MORE</a>
+                      </div>
+                    </div>
+                  </div>
+            
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="images/person2.webp" alt="Blake Hurst" width="600" height="400">
+                      </div>
+                      <div class="flip-card-back">
+                        <h2>Blake Hurst</h2>
+                        <h4>Back-End Development</h4>
+                        <p>Blake is a back-end developer specializing in building robust, scalable server-side applications. David has contributed to several large-scale projects in the tech industry. At the conference, he'll share his insights on optimizing server performance, securing web applications, and managing data flow in modern web environments, offering practical strategies for developers working with complex back-end infrastructures.</p>
+                        <a href="a">READ MORE</a>
+                      </div>
+                    </div>
+                  </div>
+            
+                  <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="images/person3.webp" alt="Alan Sanchez" width="600" height="400">
+                      </div>
+                      <div class="flip-card-back">
+                        <h2>Alan Sanchez</h2>
+                        <h4>Designer</h4>
+                        <p>Alan is a user experience and interface design expert with a passion for accessibility and inclusive design. His career spans numerous industries, where he has worked to create web applications that are not only visually stunning but also intuitive and accessible to all users. At the conference, Alan will discuss the importance of designing with accessibility in mind, providing actionable tips on how to create websites that are usable and enjoyable for everyone.</p>
+                        <a href="a">READ MORE</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        </main>
+    </div>
+
+
+
+    <div id="footerWrapper">
+        <footer>
+            <p>&copy; 2024 &bull; Elsa Ebenhoch</p>
+        </footer>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

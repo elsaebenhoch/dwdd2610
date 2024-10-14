@@ -1,0 +1,19 @@
+header, nav, main {
+    max-width: 60rem;
+    margin: auto;
+}
+
+header {
+    img {
+        display: block;
+        width: 100px;
+        height: auto;
+    }
+    h1 {
+        padding-left: 3rem;
+    }
+}
+
+#primaryNav {
+    width: 100%;
+}

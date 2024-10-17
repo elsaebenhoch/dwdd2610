@@ -1,0 +1,23 @@
+#hamburgerBtn {
+    display: none;
+}
+
+#primaryNav {
+    display: flex;
+}
+
+nav {
+    ul li a {
+        border: none;
+        color: $secondaryColor;
+        padding: 1rem 1.5rem;
+        transition: background 0.5s linear;
+        font-weight: $boldWeight;
+    }
+    ul li a:hover {
+        background-color: $whiteColor;
+    }
+    li.active a {
+        color: $primaryColor;
+    }
+}

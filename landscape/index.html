@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
+    <title>Luxe Landscapes</title>
+</head>
+<body>
+    <div id="headerWrapper">
+        <header>
+            <a href=""><img src="images/logo1x.png" alt="site logo" width="50px" height="50px" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"></a>
+            <a class=number href="tel:8357073452">835-707-3452</a>
+            <button id="theButton"></button>
+        </header>
+    </div>
+
+    <div id="navWrapper">
+        <nav>
+            <ul id="theNav">
+                <li class="active"><a href="#">Services</a></li>
+                <li class="parent"><a href="#">Clients</a>
+                    <ul>
+                        <li><a href="#">Existing Clients</a></li>
+                        <li><a href="#">New Clients</a></li>
+                    </ul>
+                </li>
+                <li class="parent"><a href="#">Gallery</a>
+                    <ul>
+                        <li><a href="#">Commercial</a></li>
+                        <li><a href="#">Residential</a></li>
+                        <li><a href="#">All</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="mainWrapper">
+        <main>
+        <!-- image slider -->
+        <div class="swiper">
+            <div class="text">
+                <p>Some of our proud work.</p>
+            </div>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <picture>
+                    <source srcset="images/ls1small.webp" media="(max-width: 400px)">
+                    <source srcset="images/ls1med.webp" media="(max-width: 800px)">
+                    <img src="images/ls1big.webp" alt="slider" width="1200" height="500">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                    <source srcset="images/ls2small.jpg" media="(max-width: 400px)">
+                    <source srcset="images/ls2med.jpg" media="(max-width: 800px)">
+                    <img src="images/ls2big.jpg" alt="slider" width="1200" height="500">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                    <source srcset="images/ls3small.webp" media="(max-width: 400px)">
+                    <source srcset="images/ls3med.webp" media="(max-width: 800px)">
+                    <img src="images/ls3big.webp" alt="slider" width="1200" height="500">
+                </picture>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+           <h1>Services</h1>
+           <!-- service cards -->
+           <div class="services">
+                <section>
+                    <h2>Landscape Design</h2>
+                    <img src="images/design.webp" alt="design" width="700" height="400">
+                    <img src="images/scallopcutout.png" alt="scallop" width="700" height="61">
+                </section>
+
+                <section>
+                    <h2>Lawn Mowing</h2>
+                    <img src="images/lawnmow.png" alt="design" width="700" height="400">
+                    <img src="images/grasscutout.png" alt="scallop" width="700" height="400">
+                </section>
+
+                <section>
+                    <h2>Tree Removal</h2>
+                    <img src="images/treeremoval.webp" alt="design" width="700" height="400">
+                    <img src="images/scallopcutout.png" alt="scallop" width="700" height="61">
+                </section>
+
+                <section>
+                    <h2>Planting</h2>
+                    <img src="images/planting.jpg" alt="design" width="700" height="400">
+                    <img src="images/grasscutout.png" alt="scallop" width="700" height="400">
+                </section>
+           </div>
+
+
+          <!-- customer reviews -->
+          <div class="customers">
+            <section>
+                <img src="images/customer1.jpg" width="450" height="450" alt="customer1">
+                <p>These guys came in and took care of my back yard, side yards and a little in the front. They did everything I asked and stayed to their original quote. Very professional and nice. They finished the project on time as well. I couldn't be happier with their service.</p>
+            </section>
+            <section>
+                <img src="images/customer2.jpg" width="450" height="450" alt="customer1">
+                <p>You won’t find a harder working group of workers, they showed up everyday before the allotted start time and stayed until the days scheduled work was completed. They always left the yard clean and prepped for the next day. They were polite and respectful of homes around us and I never heard any complaints from others while the work was going on. I now have a beautiful backyard!</p>
+            </section>
+        </div>
+        </main>
+    </div> <!-- end main wrapper -->
+
+    <div id="footerWrapper">
+        <footer>
+            <p>&copy; 2024 &bull; Elsa Ebenhoch</p>
+        </footer>
+    </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

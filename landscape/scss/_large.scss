@@ -1,0 +1,16 @@
+header, nav, main {
+    max-width: 60rem;
+    margin: auto;
+}
+
+div.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+div.customers {
+    section {
+        grid-template-columns: 200px auto;
+        gap: 10px;
+    }
+}

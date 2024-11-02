@@ -1,0 +1,40 @@
+header, nav, main {
+    max-width: 60rem;
+    margin: auto;
+}
+
+#hamburgerBtn {
+    display: none;
+}
+
+.moveOver>.content {
+    transform: translateX(0px); // moves everything sideways
+}
+
+#navWrapper {
+    background-color: $orangeColor;
+}
+
+nav {
+    background-color: transparent;
+    position: static;
+    transform: translateX(0);
+    width: auto;
+    ul {
+        display: flex;
+        margin-left: $gutter;
+    }
+    ul li a {
+        padding: .6rem 1.5rem;
+        border: none;
+    }
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    img {
+        width: 250px;
+        height: auto;
+    }
+}

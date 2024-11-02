@@ -1,0 +1,130 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $defaultFont;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 50px auto 44px;
+    column-gap: $gutter;
+    align-items: center;
+    padding: .5rem $gutter;
+    border-bottom: 1px $primaryColor solid;
+    h1 {color: $primaryColor;}
+}
+
+#hamburgerBtn {
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: $primaryColor;
+    &:before {
+        content: "\2630";
+    }
+}
+
+nav {
+    background-color: $orangeColor;
+    width: 180px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateX(100%);
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    ul li a {
+        display: block;
+        padding: .9rem .5rem;
+        text-align: right;
+        border-bottom: 1px $primaryColor solid;
+        text-decoration: none;
+        color: $whiteColor;
+    }
+    ul li a:hover {
+        background-color: $secondaryColor;
+    }
+    li.active a {
+        color: $primaryColor;
+        font-weight: $boldWeight;
+    }
+}
+
+.moveOver #hamburgerBtn::before {
+    content: "\2715";
+}
+
+.moveOver>.content {
+    transform: translateX(-180px); // moves everything sideways
+    transition: transform 500ms ease; // animates slide
+}
+
+#pageWrapper {
+    position: relative; // stops slide to see menu items
+    overflow-x: hidden; // stops extra space to the right of nav
+    height: 100vw;
+}
+
+h1 {
+    padding-left: $gutter;
+}
+
+#cards {
+    section {
+        display: grid;
+        grid-template-areas: "img" "name" "address" "phone";
+        padding: $gutter;
+    }
+    img {
+        grid-area: img; 
+        width: 100%; 
+        height: auto;
+        border-radius: 10px;
+    }
+    h2 {
+        grid-area: name;
+        color: $orangeColor;
+    }
+    address {
+        grid-area: address;
+        padding-bottom: .25rem;
+    }
+    a {
+        grid-area: phone;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        background-color: $secondaryColor;
+        padding: .5rem;
+        border-radius: 10px;
+        align-items: center;
+    }
+}
+
+#footerWrapper {
+    background-color: $orangeColor;
+    text-align: center;
+    padding: .5rem;
+    color: white;
+    font-weight: $lightWeight;
+}

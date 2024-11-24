@@ -1,0 +1,13 @@
+nav {
+    img {
+        display: none;
+    }
+    span {
+        display: block;
+        color: #0d1821;
+        text-align: center;
+    }
+    li {
+        &:hover {background-color: lighten($menuColor, 10%)}
+    }
+}
